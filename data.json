@@ -1,0 +1,98 @@
+[
+  {
+    "img": "https://source.unsplash.com/random/800x600",
+    "brand": "Sloane Boutique",
+    "url": "sloaneboutique.gr",
+    "service": "Google and Facebook Ads",
+    "social": [
+      {
+        "link": "https://facebook.com",
+        "name": "Facebook"
+      },
+      {
+        "link": "https://instagram.com",
+        "name": "Instagram"
+      }
+    ]
+  },
+  {
+    "img": "https://source.unsplash.com/random/800x600",
+    "brand": "MYA Collection",
+    "url": "myacollection.gr",
+    "service": "Website Design, Facebook Ads",
+    "social": [
+      {
+        "link": "https://facebook.com",
+        "name": "Facebook"
+      },
+      {
+        "link": "https://instagram.com",
+        "name": "Instagram"
+      }
+    ]
+  },
+  {
+    "img": "https://source.unsplash.com/random/800x600",
+    "brand": "Περί Ύπνου",
+    "url": "periypnou.gr",
+    "service": "Website Design",
+    "social": [
+      {
+        "link": "https://facebook.com",
+        "name": "Facebook"
+      },
+      {
+        "link": "https://instagram.com",
+        "name": "Instagram"
+      }
+    ]
+  },
+  {
+    "img": "https://source.unsplash.com/random/800x600",
+    "brand": "Be The Change",
+    "url": "bethechange.gr",
+    "service": "Website Design",
+    "social": [
+      {
+        "link": "https://facebook.com",
+        "name": "Facebook"
+      },
+      {
+        "link": "https://instagram.com",
+        "name": "Instagram"
+      }
+    ]
+  },
+  {
+    "img": "https://source.unsplash.com/random/800x600",
+    "brand": "Atlantis",
+    "url": "atlantis-shine.gr",
+    "service": "Website Design",
+    "social": [
+      {
+        "link": "https://facebook.com",
+        "name": "Facebook"
+      },
+      {
+        "link": "https://instagram.com",
+        "name": "Instagram"
+      }
+    ]
+  },
+  {
+    "img": "https://source.unsplash.com/random/800x600",
+    "brand": "Συνειδησιακή Ανάπτυξη",
+    "url": "sin-an.gr",
+    "service": "Website Design",
+    "social": [
+      {
+        "link": "https://facebook.com",
+        "name": "Facebook"
+      },
+      {
+        "link": "https://instagram.com",
+        "name": "Instagram"
+      }
+    ]
+  }
+]
