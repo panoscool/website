@@ -1,5 +1,6 @@
 // DOM Elements
 const cards = document.getElementById("cards");
+const copyright = document.getElementById("year")
 
 fetchData();
 
@@ -42,3 +43,5 @@ const setupCards = (data) => {
   })
   cards.innerHTML = html;
 }
+
+copyright.innerHTML = new Date().getFullYear();
