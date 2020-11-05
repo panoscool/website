@@ -2,6 +2,11 @@
 const cards = document.getElementById("cards");
 const copyright = document.getElementById("year")
 
+AOS.init({
+  offset: 120,
+  duration: 1000
+});
+
 fetchData();
 
 async function fetchData() {
@@ -16,14 +21,14 @@ async function fetchData() {
 }
 
 const setupCards = (data) => {
-  let html = '';
+  let card = '';
   data.forEach(({ img, url, brand, service, social }) => {
     let socialLinks = '';
     social.map(({ link, name }, idx, social) => {
       socialLinks += `<a key=${name} href=${link} target="_blank" rel="noopener noreferrer">${social.length + 1 !== idx && idx !== 0 ? `, ${name}` : name}</a>`
     });
 
-    const card = `
+    card += `
       <div class="card">
        <div class="card-inner">
           <div class="card-front">
@@ -38,10 +43,8 @@ const setupCards = (data) => {
         </div>
       </div>
     `;
-
-    html += card
   })
-  cards.innerHTML = html;
+  cards.innerHTML = card;
 }
 
 copyright.innerHTML = new Date().getFullYear();
