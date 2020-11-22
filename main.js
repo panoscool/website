@@ -1,11 +1,34 @@
 // DOM Elements
+const header = document.querySelector("header");
+const intro = document.querySelector(".showcase");
 const cards = document.getElementById("cards");
-const copyright = document.getElementById("year")
+const copyright = document.getElementById("year");
+const menuBtn = document.getElementById("menu-btn");
+const links = document.querySelectorAll(".link");
 
 AOS.init({
   offset: 120,
   duration: 1000
 });
+
+const introOptions = {
+  rootMargin: "-100px 0px 0px 0px",
+  threshold: 0.5
+};
+
+const introObserver = new IntersectionObserver(sectionCheck, introOptions);
+
+function sectionCheck(entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      header.classList.add("navbar-scrolled");
+    } else {
+      header.classList.remove("navbar-scrolled");
+    }
+  })
+}
+
+introObserver.observe(intro);
 
 fetchData();
 
@@ -16,9 +39,17 @@ async function fetchData() {
     setupCards(data);
     return data;
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
+
+const handleCheck = () => {
+  if (menuBtn.checked) {
+    menuBtn.checked = !menuBtn.checked;
+  }
+}
+
+links.forEach(link => link.addEventListener('click', handleCheck));
 
 const setupCards = (data) => {
   let card = '';

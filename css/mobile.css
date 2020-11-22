@@ -1,17 +1,10 @@
 @media (max-width: 500px) {
-  .navbar {
-    height: 110px;
-  }
-
-  .navbar .flex {
-    flex-direction: column;
-  }
-
   .navbar ul {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.1);
   }
-  .showcase-form {
+
+  .contact-form {
     justify-self: center;
     margin: auto;
     width: 300px;
@@ -27,8 +20,20 @@
 }
 
 @media (max-width: 769px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .menu-btn:checked ~ .menu-list {
+    visibility: visible;
+  }
+  
+  .menu-list {
+    visibility: hidden;
+  }
+
   .grid,
-  .showcase .grid,
+  .contact .grid,
   .services .grid,
   .portfolio .grid,
   .footer .grid {
@@ -36,17 +41,17 @@
     grid-template-rows: 1fr;
   }
 
-  .showcase {
+  .contact {
     height: auto;
   }
 
-  .showcase-text {
+  .contact-text {
     text-align: center;
     margin-top: 40px;
     animation: slideInFromBottom 1s ease-in;
   }
 
-  .showcase-form {
+  .contact-form {
     justify-self: center;
     margin: auto;
     animation: slideInFromBottom 1s ease-in;

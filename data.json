@@ -18,7 +18,23 @@
   {
     "img": "https://source.unsplash.com/random/800x600",
     "brand": "MYA Collection",
-    "url": "myacollection.gr",
+    "url": "myacollection.com",
+    "service": "Website Design, Facebook Ads",
+    "social": [
+      {
+        "link": "https://facebook.com",
+        "name": "Facebook"
+      },
+      {
+        "link": "https://instagram.com",
+        "name": "Instagram"
+      }
+    ]
+  },
+  {
+    "img": "https://source.unsplash.com/random/800x600",
+    "brand": "OZAR World",
+    "url": "ozarworld.com",
     "service": "Website Design, Facebook Ads",
     "social": [
       {
