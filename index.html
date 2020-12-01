@@ -9,8 +9,7 @@
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="style.css">
 
   <title>Website | Digitize your business</title>
   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
@@ -19,21 +18,22 @@
 
 <body>
   <!-- Navbar -->
-  <header class="navbar" id="top">
-    <div class="container flex">
-      <h1 class="logo"><a href="/">Website</a></h1>
-      <input type="checkbox" id="menu-btn" class="menu-btn" />
-      <label for="menu-btn" class="menu-icon">
-        <span class="nav-icon"></span>
-      </label>
-      <div class="menu-list">
-        <nav>
-          <ul>
-            <li class="link"><a href="/">Home</a></li>
+  <header class="header" id="home">
+    <div class="navbar">
+      <div class="container">
+        <nav class="nav">
+          <a href="/" class="logo">Website</a>
+
+          <ul class="nav__links">
+            <li class="link"><a href="#home">Home</a></li>
             <li class="link"><a href="#services">Services</a></li>
             <li class="link"><a href="#portfolio">Portfolio</a></li>
             <li class="link"><a href="#contact">Contact</a></li>
           </ul>
+
+          <button class="nav__toggler">
+            <span></span>
+          </button>
         </nav>
       </div>
     </div>
@@ -42,10 +42,7 @@
   <main>
     <!-- Showcase -->
     <section class="showcase showcase-img">
-      <div class="container flex">
-        <h1 class="showcase__title">Reach your clients <br /> where they are</h1>
-        <img src="/images/www.png" alt="bg-image">
-      </div>
+      <h1 class="showcase__title">Reach your clients where they are</h1>
     </section>
 
     <!-- Services -->
@@ -119,7 +116,7 @@
             <div class="form-control">
               <textarea name="text" rows="3" cols="50" placeholder="Your text" required></textarea>
             </div>
-            <input type="submit" value="Send" class="btn btn-primary">
+            <input type="submit" value="Send" class="btn btn-primary" />
           </form>
         </div>
       </div>
@@ -135,7 +132,7 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#top">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
         </ul>

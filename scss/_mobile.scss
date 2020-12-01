@@ -1,0 +1,88 @@
+@media (max-width: 769px) {
+  .navbar {
+    position: static;
+    background: $primary-color;
+  }
+
+  .nav {
+    margin: 16px 0;
+  }
+
+  .nav__toggler{
+    display: block;
+  }
+
+  .nav__links {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 70px;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    background-color: $nav-color;
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s;
+  }
+
+  .nav__links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav__links li a {
+    padding: 25px;
+  }
+
+  .nav__links li a:hover {
+    background-color: $nav-overlay;
+  }
+
+  .nav__links.open {
+    border-top: 1px solid $nav-overlay;
+    max-height: 100vh;
+    overflow: visible;
+  }
+
+  .projects .card {
+    width: 100%;
+  }
+
+  .projects .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid,
+  .contact .grid,
+  .services .grid,
+  .portfolio .grid,
+  .footer .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .contact {
+    height: auto;
+  }
+
+  .contact-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .contact-form {
+    justify-self: center;
+    margin: auto;
+    width: 300px;
+  }
+
+  .footer .grid {
+    text-align: center;
+  }
+
+  .footer .social {
+    margin-top: 20px;
+  }
+}

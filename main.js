@@ -1,34 +1,14 @@
 // DOM Elements
-const header = document.querySelector("header");
-const intro = document.querySelector(".showcase");
-const cards = document.getElementById("cards");
-const copyright = document.getElementById("year");
-const menuBtn = document.getElementById("menu-btn");
+const menuBtn = document.querySelector(".nav__toggler");
+const menuList = document.querySelector(".nav__links");
 const links = document.querySelectorAll(".link");
+const cards = document.querySelector("#cards");
+const copyright = document.querySelector("#year");
 
 AOS.init({
   offset: 120,
   duration: 1000
 });
-
-const introOptions = {
-  rootMargin: "-100px 0px 0px 0px",
-  threshold: 0.5
-};
-
-const introObserver = new IntersectionObserver(sectionCheck, introOptions);
-
-function sectionCheck(entries, observer) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      header.classList.add("navbar-scrolled");
-    } else {
-      header.classList.remove("navbar-scrolled");
-    }
-  })
-}
-
-introObserver.observe(intro);
 
 fetchData();
 
@@ -42,14 +22,6 @@ async function fetchData() {
     console.log(error);
   }
 }
-
-const handleCheck = () => {
-  if (menuBtn.checked) {
-    menuBtn.checked = !menuBtn.checked;
-  }
-}
-
-links.forEach(link => link.addEventListener('click', handleCheck));
 
 const setupCards = (data) => {
   let card = '';
@@ -74,8 +46,15 @@ const setupCards = (data) => {
         </div>
       </div>
     `;
-  })
+  });
   cards.innerHTML = card;
 }
+
+function handleToggler() {
+  menuBtn.classList.toggle("open");
+  menuList.classList.toggle("open");
+}
+
+menuBtn.addEventListener("click", handleToggler);
 
 copyright.innerHTML = new Date().getFullYear();

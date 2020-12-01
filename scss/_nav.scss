@@ -1,0 +1,83 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: $nav-color;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.link a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link a:hover {
+  background-color: $nav-overlay;
+}
+
+.nav__toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  outline: none;
+  display: none;
+}
+
+.nav__toggler span, 
+.nav__toggler span:before, 
+.nav__toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: .3s;
+}
+
+.nav__toggler span:before {
+  content: '';
+  transform: translateY(-9px);
+}
+
+.nav__toggler span:after {
+  content: '';
+  transform: translateY(6px);
+}
+
+.nav__toggler.open span {
+  background-color: transparent;
+}
+
+.nav__toggler.open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.nav__toggler.open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
